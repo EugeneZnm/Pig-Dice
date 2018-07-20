@@ -1,39 +1,60 @@
-.welcome {
-    text-align: center;
-}
-
-.card-title {
-    text-align: center;
-}
-
-.header {
-    margin-top: 75px;
-}
-
-.playerone {
-    margin: 20px;
-    width: 400px;
-    position: relative;
-    left: 30%;
-    height: 250px;
-}
-
-.rounds1 {
-    margin-top: 35px;
-}
-
-.playertwo {
-    margin: 20px;
-    width: 400px;
-    height: 250px;
-}
-
-.rounds2 {
-    margin-top: 35px;
-}
-
-.header {
-    width: 400px;
-    position: relative;
-    left: 35%;
-}
+    .welcome {
+        text-align: center;
+        /* font-family: 'Pacifico', cursive; */
+        font-family: 'Yellowtail', cursive;
+    }
+    
+    .card-title {
+        text-align: center;
+    }
+    
+    .header {
+        margin-top: 75px;
+    }
+    
+    .playerone {
+        margin: 20px;
+        width: 400px;
+        position: relative;
+        left: 10%;
+        height: 250px;
+    }
+    
+    .rounds1 {
+        margin-top: 35px;
+    }
+    
+    .playertwo {
+        margin: 20px;
+        width: 400px;
+        height: 250px;
+    }
+    
+    .rounds2 {
+        margin-top: 35px;
+    }
+    
+    .header {
+        width: 400px;
+        position: relative;
+        left: 35%;
+    }
+    
+    .head2 {
+        background-color: darksalmon;
+    }
+    
+    .card-body {
+        background-color: darkkhaki;
+    }
+    
+    .head3 {
+        background-color: darksalmon;
+    }
+    
+    img {
+        height: 300px;
+        width: 300px;
+        position: relative;
+        left: 20%;
+    }
