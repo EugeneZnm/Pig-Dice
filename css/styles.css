@@ -7,17 +7,33 @@
 }
 
 .header {
-    margin-top: 20px;
+    margin-top: 75px;
 }
 
 .playerone {
     margin: 20px;
     width: 400px;
     position: relative;
-    left: 20%;
+    left: 30%;
     height: 250px;
 }
 
 .rounds1 {
     margin-top: 35px;
+}
+
+.playertwo {
+    margin: 20px;
+    width: 400px;
+    height: 250px;
+}
+
+.rounds2 {
+    margin-top: 35px;
+}
+
+.header {
+    width: 400px;
+    position: relative;
+    left: 35%;
 }
