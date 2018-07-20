@@ -5,3 +5,15 @@
 .card-title {
     text-align: center;
 }
+
+.header {
+    margin-top: 20px;
+}
+
+.playerone {
+    margin: 20px;
+    width: 400px;
+    position: relative;
+    left: 20%;
+    height: 250px;
+}
