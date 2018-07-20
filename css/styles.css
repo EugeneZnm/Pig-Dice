@@ -14,6 +14,7 @@
     
     .playerone {
         margin: 20px;
+        margin-top: 80px;
         width: 400px;
         position: relative;
         left: 10%;
@@ -26,6 +27,7 @@
     
     .playertwo {
         margin: 20px;
+        margin-top: 80px;
         width: 400px;
         height: 250px;
     }
@@ -53,7 +55,7 @@
     }
     
     img {
-        height: 400px;
+        height: 450px;
         width: 400px;
         position: relative;
         left: 10%;
