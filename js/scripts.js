@@ -12,14 +12,28 @@ var rolldice = function() {
 // 5 creating player constructor
 function player() {
     this.roll = 0;
-    this.roundcore = 0;
+    this.roundscore = 0;
     this.totalscore = 0;
+}
+
+// 6 Check for 1
+player.prototype.rollit = function() {
+    if (this.roll === 1) {
+        this.roundscore === 0;
+        alert("your rolled 1, your turn is over")
+    }
+
+    //6.5 add value of die roll to total score
+    else {
+        this.roundscore += this.roll;
+
+    }
 }
 
 
 // USER INTERFACE
 
-// 1 startgame click function
+// 1 Start-game click function
 $(document).ready(function() {
     $("button#startgame").click(function(event) {
         playerone = new player(true);
@@ -30,6 +44,10 @@ $(document).ready(function() {
     $("button#rollp1").click(function(event) {
         playerone.roll = rolldice();
         $("#rolldie").text(playerone.roll);
+
+        // 7 display roundscore
+        playerone.rollit();
+        $("#roundscores").text(playerone.roundscore);
     });
 
 
