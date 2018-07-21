@@ -60,3 +60,9 @@
         position: relative;
         left: 10%;
     }
+    
+    #startgame {
+        position: relative;
+        left: 82%;
+        /* margin-left: 100px; */
+    }
