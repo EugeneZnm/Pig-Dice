@@ -23,7 +23,7 @@ player.prototype.rollit = function() {
         alert("your rolled 1, your turn is over")
     }
 
-    //6.5 add value of die roll to total score
+    // 6.5 add value of die roll to total score
     else {
         this.roundscore += this.roll;
 
@@ -35,6 +35,13 @@ player.prototype.hold = function() {
     this.totalscore += this.roundscore;
     this.roundscore === 0;
     alert("Your turn is over, player two plays...OINK!! OINK!! OINK!!");
+}
+
+// 13 check for winner
+player.prototype.winneris = function() {
+    if (this.totalscore === 100); {
+        alert("OINK!! OINK!! OINK!! Current player is the winner");
+    }
 }
 
 
@@ -58,30 +65,36 @@ $(document).ready(function() {
         $("#roundscores").text(playerone.roundscore);
     });
 
-    //9 Player one hold
+    // 9 Player one hold
     $("button#holdp1").click(function(event) {
         playerone.hold();
         $("#totalscore").text(playerone.totalscore);
         $("#roundscores").empty();
         $("#rolldie").empty();
+
+        // 13.1 check of player1 is winner
+        playerone.winneris();
     });
 
 
-    //10 Player 2 roll dice
+    // 10 Player 2 roll dice
     $("button#rollp2").click(function(event) {
         playertwo.roll = rolldice();
         $("#rolldie1").text(playertwo.roll);
 
-        //11 display player2 roundscore
+        // 11 display player2 roundscore
         playertwo.rollit();
         $("#roundscore2").text(playertwo.roundscore);
     });
 
-    //12 player two hold
+    // 12 player two hold
     $("button#holdp2").click(function(event) {
         playertwo.hold();
         $("#totalscore2").text(playertwo.totalscore);
         $("#roundscore2").empty();
         $("#rolldie1").empty();
+
+        // 13.2 check if player 2 is winner
+        playertwo.winneris();
     });
 });
