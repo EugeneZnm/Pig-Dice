@@ -62,9 +62,18 @@ $(document).ready(function() {
     $("button#holdp1").click(function(event) {
         playerone.hold();
         $("#totalscore").text(playerone.totalscore);
-        $("#roundscore").empty();
+        $("#roundscores").empty();
         $("#rolldie").empty();
     });
 
 
+    //10 Player 2 roll dice
+    $("button#rollp2").click(function(event) {
+        playertwo.roll = rolldice();
+        $("#rolldie1").text(playertwo.roll);
+
+        //11 display player2 roundscore
+        playertwo.rollit();
+        $("#roundscore2").text(playertwo.roundscore);
+    });
 });
