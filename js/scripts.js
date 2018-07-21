@@ -30,6 +30,14 @@ player.prototype.rollit = function() {
     }
 }
 
+// 8 player hold
+player.prototype.hold = function() {
+    this.totalscore += this.roundscore;
+    this.roundscore === 0;
+    alert("Your turn is over, player two plays...OINK!! OINK!! OINK!!");
+}
+
+
 
 // USER INTERFACE
 
@@ -48,6 +56,14 @@ $(document).ready(function() {
         // 7 display roundscore
         playerone.rollit();
         $("#roundscores").text(playerone.roundscore);
+    });
+
+    //9 Player one hold
+    $("button#holdp1").click(function(event) {
+        playerone.hold();
+        $("#totalscore").text(playerone.totalscore);
+        $("#roundscore").empty();
+        $("#rolldie").empty();
     });
 
 
