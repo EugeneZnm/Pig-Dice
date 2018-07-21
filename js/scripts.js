@@ -37,11 +37,18 @@ player.prototype.hold = function() {
     alert("Your turn is over, player two plays...OINK!! OINK!! OINK!!");
 }
 
-// 13 check for winner
-player.prototype.winneris = function() {
-    if (this.totalscore === 100); {
-        alert("OINK!! OINK!! OINK!! Current player is the winner");
-    }
+// // 13 check for winner
+// player.prototype.winneris = function() {
+//     if (this.totalscore >= 100); {
+//         alert("OINK!! OINK!! OINK!! Current player is the winner");
+//     }
+// }
+
+// 14 Clear current game and start new game
+player.prototype.newgame = function() {
+    this.roll = 0;
+    this.roundscore = 0;
+    this.totalscore = 0;
 }
 
 
@@ -72,8 +79,8 @@ $(document).ready(function() {
         $("#roundscores").empty();
         $("#rolldie").empty();
 
-        // 13.1 check of player1 is winner
-        playerone.winneris();
+        // // 13.1 check of player1 is winner
+        // playerone.winneris();
     });
 
 
@@ -94,7 +101,18 @@ $(document).ready(function() {
         $("#roundscore2").empty();
         $("#rolldie1").empty();
 
-        // 13.2 check if player 2 is winner
-        playertwo.winneris();
+        // // 13.2 check if player 2 is winner
+        // playertwo.winneris();
+    });
+
+
+    // 15 Clear Game and start new game
+    $("button#freshgame").click(function(event) {
+        $("#rolldie").empty();
+        $("#roundscores").empty();
+        $("#totalscore").empty();
+        $("#rolldie1").empty();
+        $("#roundscore2").empty();
+        $("#totalscore2").empty();
     });
 });
