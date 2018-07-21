@@ -76,4 +76,12 @@ $(document).ready(function() {
         playertwo.rollit();
         $("#roundscore2").text(playertwo.roundscore);
     });
+
+    //12 player two hold
+    $("button#holdp2").click(function(event) {
+        playertwo.hold();
+        $("#totalscore2").text(playertwo.totalscore);
+        $("#roundscore2").empty();
+        $("#rolldie1").empty();
+    });
 });
